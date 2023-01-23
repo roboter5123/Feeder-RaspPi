@@ -18,8 +18,8 @@ motor: Motor = Motor(motor_forward_pin, motor_backward_pin)
 settings: dict[str, any]
 
 current_time: datetime = datetime.datetime.now()
-settings_path: str = "python/settings.json"
-logs_path: str = "python/logs/log-"
+settings_path: str = "settings.json"
+logs_path: str = "logs/log-"
 
 
 def main() -> None:
@@ -236,7 +236,7 @@ def dispense(dispense_seconds: int) -> None:
 def log(log_message: str):
     global logs_path
 
-    if logs_path == "python/logs/log-":
+    if logs_path == "logs/log-":
         logs_path += f"{current_time.year}-{current_time.month}-{current_time.day}-{current_time.hour}-{current_time.minute}-{current_time.second}.txt"
         logs_file = open(logs_path, "x")
         logs_file.close()

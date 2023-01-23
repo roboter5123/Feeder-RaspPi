@@ -4,7 +4,7 @@ import socket
 from Weekday import Weekday
 import Task
 
-login_url:str = "192.168.0.2"
+login_url:str = "10.169.125.40"
 server: socket
 server_functions = {}
 port = 8058
